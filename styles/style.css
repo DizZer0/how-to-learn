@@ -8,10 +8,7 @@
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
-/* удали потом*/
-* {
-  box-sizing: border-box;
-}
+
 
 /* блок header
 -----------------------------------------------*/
@@ -22,7 +19,6 @@
   background-color: #f2f2f2;
   display: flex;
   position: relative;
-  /* выше установили ограничения для секции */
 }
 .logo {
   width: 183px;
@@ -37,7 +33,7 @@
 .header__title {
   width: 730px;
   align-self: center;
-  margin-left: 64px;
+  margin: 0 0 0 64px;
   font-size: 102px;
   line-height: 96px;
   z-index: 2;
@@ -47,6 +43,7 @@
   bottom: 30px;
   left: 64px;
   width: 388px;
+  margin: 0;
   font-size: 18px;
   line-height: 25px;
   z-index: 2;
@@ -70,13 +67,10 @@
   bottom: 0;
   z-index: 1;
 }
-
 .header__link {
   text-decoration: none;
   color: #2f80ed;
 }
-
-
 /*блок description
 --------------------------------------------------------------------------------------*/
 .two-columns {
@@ -84,7 +78,7 @@
   justify-content: space-between;
   width: 80%;
 }
-.two-columns_margin{
+.two-columns_place_header {
   margin: 100px auto 0;
 }
 .two-columns__brief {
@@ -112,29 +106,29 @@
 .two-columns__span-accent {
   font-weight: bold;
 }
-
-
 /*блок digits
 --------------------------------------------------------------------------------------*/
 .digits_padding {
   padding: 100px 0 100px;
 }
 .section-title {
+  margin: 0;
   width: 60%;
   text-align: center;
   font-size: 60px;
   line-height: 1.15;
 }
-.digits__section-title {
-  margin: 100px auto 20px;
+.section-title_place_digits {
+  margin: 0 auto 20px;
 }
 .section-subtitle {
+  margin: 0;
   width: 60%;
   text-align: center;
   font-size: 24px;
   line-height: 34px;
 }
-.digits__section-subtitle {
+.section-subtitle_place_digits {
   margin: 0 auto;
 }
 .table {
@@ -143,55 +137,52 @@
   justify-content: space-between;
   width: 1100px;
 }
-.digits__table {
-  margin: 0 auto 100px;
+.table_place_digits {
+  margin: 0 auto;
 }
-.table__cell {
-
-}
-.table__cell_digits {
+.table__cell_place_digits {
   width: 250px;
   margin-top: 60px;
 }
 .table__heading {
-  margin: 0 0 20px;
+  margin: 0;
   font-size: 24px;
   line-height: 1.15;
 }
 .table__text {
+  margin: 20px 0 0;
   font-size: 18px;
   line-height: 1.2;
 }
-.margin-top_20 {
-  margin-top: 20px;
-}
-
-
-/*блок digits
+/*блок feynman
 --------------------------------------------------------------------------------------*/
 .feynman {
   height: 890px;
   position: relative;
+  background-color: #f2f2f2;
 }
 .feynman__img {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: -1;
 }
 .feynman__title {
+  position: relative;
   width: 648px;
   text-align: center;
   font-size: 120px;
   line-height: 1.15;
   padding-top: 100px;
   margin: 0 auto;
+  z-index: 1;
 }
 .feynman__subtitle {
-  margin-top: 70px;
+  position: relative;
+  margin: 70px 0 0;
   text-align: center;
   font-size: 36px;
   line-height: 51px;
+  z-index: 1;
 }
 .feynman__link {
   position: absolute;
@@ -201,6 +192,7 @@
   line-height: 51px;
   text-decoration: none;
   color: #2f80ed;
+  z-index: 2;
 }
 /*блок kaufman
 --------------------------------------------------------------------------------------*/
@@ -210,13 +202,13 @@
   position: relative;
   z-index: -2;
 }
-.kaufman__section-title {
+.section-title_place_kaufman {
   margin: 90px auto 20px;
 }
-.kaufman__section-subtitle {
+.section-subtitle_place_kaufman {
  margin: 0 auto;
 }
-.kaufman_triangle {
+.kaufman__triangle {
   width: 877px;
   height: 877px;
   position: absolute;
@@ -227,13 +219,13 @@
 .kaufman_theme_dark {
   color: white;
 }
-.kaufman__table {
-  margin-bottom: 90px;
+.table_place_kaufman {
+  margin: 0 auto 90px;
 }
 .table_theme_dark {
   color: white;
 }
-.table__cell_kaufman {
+.table__cell_place_kaufman {
   width: 200px;
   margin-top: 80px;
 }
@@ -268,13 +260,13 @@
 .footer__columns_theme_dark {
   color: white;
 }
-.footer_column_content_copyright {
+.footer__column_content_copyright {
   flex-basis: 711px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.logo__place_footer {
+.logo_place_footer {
   height: 35px;
 }
 .footer__author {
@@ -282,11 +274,11 @@
   line-height: 25px;
   margin: 18px 0;
 }
-.footer__column_heading {
+.footer__column-heading {
+  margin: 0 0 20px;
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
-  margin-bottom: 20px;
 }
 .footer__column-link {
   color: white;
@@ -294,12 +286,13 @@
   font-size: 18px;
   line-height: 30px;
   display: flex;
-
+}
+.footer__column-links {
+  margin-bottom: 16px;
 }
 .footer__social-icon {
   width: 16px;
   height: 16px;
   margin-right: 10px;
   align-self: center;
-
 }
