@@ -109,7 +109,6 @@
 }
 /*Антон, здравствуйте.  Я перенес margin из section-title_place_digits в section-title(сделал тоже самое с section-subtitle ). Но в теории про блоки БЭМа написанно что нельзя задавать блокам внешние отступы. т.к. проблема в дубликате кода, я бы  удалил все 4 модфикатора, а вместо них сделал бы два элементв: page__section-title page__section-subtitle со свойством margin и замиксовал их с соответствующими блоками. хочеться увидеть ваше мнение на эту идею. заранее спасибо)*/
 .section-title {
-  margin: 0;
   width: 60%;
   text-align: center;
   font-size: 60px;
@@ -117,7 +116,6 @@
   margin: 0 auto 20px;
 }
 .section-subtitle {
-  margin: 0;
   width: 60%;
   text-align: center;
   font-size: 24px;
@@ -209,7 +207,6 @@
   color: white;
   margin-right: 0;
   padding-top: 80px;
-  width: 200px;
 }
 
 /*блок footer
