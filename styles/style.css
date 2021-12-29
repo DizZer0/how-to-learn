@@ -107,14 +107,13 @@
 .digits {
   padding: 100px 0 100px;
 }
+/*Антон, здравствуйте.  Я перенес margin из section-title_place_digits в section-title(сделал тоже самое с section-subtitle ). Но в теории про блоки БЭМа написанно что нельзя задавать блокам внешние отступы. т.к. проблема в дубликате кода, я бы  удалил все 4 модфикатора, а вместо них сделал бы два элементв: page__section-title page__section-subtitle со свойством margin и замиксовал их с соответствующими блоками. хочеться увидеть ваше мнение на эту идею. заранее спасибо)    */
 .section-title {
   margin: 0;
   width: 60%;
   text-align: center;
   font-size: 60px;
   line-height: 1.15;
-}
-.section-title_place_digits {
   margin: 0 auto 20px;
 }
 .section-subtitle {
@@ -123,8 +122,6 @@
   text-align: center;
   font-size: 24px;
   line-height: 34px;
-}
-.section-subtitle_place_digits {
   margin: 0 auto;
 }
 .table {
@@ -134,9 +131,9 @@
   justify-content: space-between;
   width: 1100px;
 }
-.table__cell_place_digits {
+.table__cell {
   width: 250px;
-  margin-top: 60px;
+  padding-top: 60px;
 }
 .table__heading {
   margin: 0;
@@ -159,7 +156,6 @@
   background-color: #f2f2f2;
 }
 .feynman__title {
-  position: relative;
   max-width: 648px;
   text-align: center;
   font-size: 120px;
@@ -169,7 +165,6 @@
   z-index: 1;
 }
 .feynman__subtitle {
-  position: relative;
   margin: 70px 0 0;
   text-align: center;
   font-size: 36px;
@@ -196,12 +191,6 @@
   z-index: -2;
   color: white;
 }
-.section-title_place_kaufman {
-  margin: 0 auto 20px;
-}
-.section-subtitle_place_kaufman {
- margin: 0 auto;
-}
 .kaufman__triangle {
   background-image: url(../images/kaufman-triangle.svg);
   background-size: cover;
@@ -215,20 +204,18 @@
 .table_theme_dark {
   color: white;
 }
-.table__cell_place_kaufman {
-  width: 200px;
-  margin-top: 80px;
-}
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
-  margin-top: 80px;
+  padding-top: 80px;
+  width: 200px;
 }
 
 /*блок footer
 --------------------------------------------------------------------------------------*/
 .footer {
+  box-sizing: border-box;
   display: flex;
   min-height: 350px;
   background-color: #1f1f1f;
@@ -241,7 +228,7 @@
   display: flex;
   width: 90%;
   justify-content: space-between;
-  margin: 60px auto 40px;
+  margin: 0 auto;
 }
 .footer__column_content_copyright {
   flex-basis: 711px;
