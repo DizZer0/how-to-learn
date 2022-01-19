@@ -1,6 +1,10 @@
 .video {
   padding-top: 100px;
   box-sizing: border-box;
-  height: 550px;
+  /*height: 550px; я ограничил высоту блока, чтобы создать в нём переполнение.
+  за счёт чего iframe залезли на территорию блока oakley. сейчас попробовал
+   в блоке iframes при помощи position: relative; bottom: -30px; сделать.
+    вроде, сработало
+  */
   position: relative;
 }

@@ -3,4 +3,8 @@
   line-height: 42px;
   color: #2f80ed;
   text-decoration: none;
+  transition: .2s;
+}
+.khan__buy-link:hover {
+  opacity: 50%;
 }
