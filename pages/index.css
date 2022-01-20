@@ -1,4 +1,8 @@
-@import url(../blocks/normalize/normalize.css);
+/* блок normalize
+-----------------------------------------------*/
+@import url(../vendor/normalize/normalize.css);
+/* блок page
+-----------------------------------------------*/
 @import url(../blocks/page/page.css);
 /* блок header
 -----------------------------------------------*/

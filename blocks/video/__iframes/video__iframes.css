@@ -1,5 +1,6 @@
 .video__iframes {
-  margin-top: 50px;
+  /*исправил отступ теперь в сумме он 50px*/
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   position: relative;
